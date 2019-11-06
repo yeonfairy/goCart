@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.yhf.dao.BoardDaoInterface">
+
+	<select id="pageCount" resultType="int">
+		select count(*) from board.board
+	</select>
+	
+	<select id="getListI" resultType="BoardVO">
+		select * from board.board order by id desc limit #{param1}, #{param2};
+	</select>
+	
+	<select id="getDetailI" resultType="BoardVO">
+		select * from board.board where id = #{id}
+	</select>
+	
+	<update id="upload" parameterType="map">
+		update board.board set file = #{param2}, originalFile = #{param3} where id = #{param1}
+	</update>
+</mapper>
