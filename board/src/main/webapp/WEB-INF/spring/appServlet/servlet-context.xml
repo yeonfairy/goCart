@@ -29,9 +29,9 @@
 		<beans:property name="driverClass"
 			value="com.mysql.jdbc.Driver" />
 		<beans:property name="jdbcUrl"
-			value="jdbc:mysql://localhost/test" />
+			value="jdbc:mysql://localhost/test?useSSL=false" />
 		<beans:property name="user" value="root" />
-		<beans:property name="password" value="nuriapp" />
+		<beans:property name="password" value="1234" />
 	</beans:bean>
 
 	<!-- mybatis-spring 모듈이 제공하는 SqlSessionFactoryBean 이용해 mybatis의 SqlSessionFactory를생성 -->
